@@ -1,0 +1,161 @@
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfcff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235ad96f' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+nav {
+  max-width: 960px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, #ffffff), color-stop(75%, #ffffff), to(rgba(255, 255, 255, 0.37)));
+  -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0.37) 100%);
+          mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, #ffffff), color-stop(75%, #ffffff), to(rgba(255, 255, 255, 0.37)));
+          mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0.37) 100%);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.37)), color-stop(75%, rgba(255, 255, 255, 0.418)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.37) 25%, rgba(255, 255, 255, 0.418) 75%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgba(0, 35, 122, 0.719);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+.CardP {
+  width: 85%;
+  margin: 10px 125px;
+  height: 60vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.247)), to(rgba(99, 202, 233, 0.336))), no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.247), rgba(99, 202, 233, 0.336)), no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgba(0, 35, 122, 0.719);
+  font-size: 35px;
+  text-decoration: none;
+  padding: 100px;
+  text-align: center;
+}
+
+.botones {
+  margin-left: 32%;
+}
+
+.stage {
+  width: 500px;
+  height: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  width: 200px;
+  font-size: 20px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: #c38b8b;
+  color: rgba(0, 35, 122, 0.719);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(124deg, #ff2200a1, #e81d1d91, #e8b91dad, #e5e81db4, #1de83fa6, #1ddee8a6, #2b1de88f, #df00f39a, #df00f391);
+  background-size: 400%;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-animation: move 20s linear infinite;
+  animation: move 20s linear infinite;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #78afcfc9;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 35, 122, 0.719);
+}
+/*# sourceMappingURL=M.Clientes.css.map */

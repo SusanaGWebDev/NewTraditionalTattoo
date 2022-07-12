@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/ListaUsuarios.css">
+    <script src="./js/Personas.js"></script>
+    <title>Mantenimiento Usuarios</title>
+</head>
+<body onload="CargarTablaPersonas()">
+    <nav>
+        <ul>
+          <li>
+            <a href="./PaginaPrincipal.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./M.Usuarios.html">M. Usuarios</a>
+          </li>
+          <li>
+            <a href="./M.Clientes.html">M. Clientes</a>
+          </li>
+          <li>
+            <a href="./M.Prod.html">M. Productos</a>
+          </li>
+          <li>
+            <a href="./M.Citas.html">M. Citas</a>
+          </li>
+          <li>
+            <a href="./inicio.html">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </nav>
+ 
+
+      <div class="CardP">
+        <h1>Lista de Usuarios</h1>
+        <div class="container">
+            <table id="tblPersonas" class="tbl-header">
+              <thead>
+                  <tr>
+                      <th>Cedula</th>
+                      <th>Nombre</th>
+                      <th>Apellidos</th>
+                      <th>Fecha de Nacimiento</th>
+                      <th>Telefono</th>
+                      <th>Rol</th>
+                      <th>Opciones</th>
+                      
+                  </tr>
+              </thead>
+              <tbody class="tbl-content">
+
+              </tbody>
+          </table>
+          
+          </div>
+          <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="Form_Tarjetas" id="frmRegPersona">
+
+                <h4>Formulario modificar Datos de Personas</h4>
+                <label for="" class="letra"> Cedula: </label>
+                <input class="controls" type="text" name="Cedula" id="txtCedMod" >
+
+                <label for="" class="letra"> Nombre: </label>
+                <input class="controls" type="text" name="Nombre" id="txtNomMod" >
+
+                <label for="" class="letra"> Apellidos: </label>
+                <input class="controls" type="text" name="Apellidos" id="txtApeMod" >
+
+                <label for="" class="letra"> Fecha de Nacimiento: </label>
+                <input class="controls letra" type="date" name="FechaNac" id="txtFechaNacMod">
+
+                <label for="" class="letra"> Telefono: </label>
+                <input class="controls letra" type="text" name="Telefono" id="txtTelefonoMod">
+
+                <label for="" class="letra"> Rol: </label>
+                <select name="Rol" id="txtRolMod" class="controls">
+                  <option>Admin</option>
+                  <option>Empleado</option>
+                  <option>Cliente</option>
+                  <option>Vendedor</option>
+                </select>
+
+                <input type="button"  id="btnGuardar" onclick="EditarPersona(document.querySelector('#txtCedMod').value)"><br><br>
+            </form>
+        </div>
+      </div>
+      </div>
+
+</body>
+</html>
+
+
+

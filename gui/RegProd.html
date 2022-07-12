@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/RegProd.css">
+    <script src="./js/productos.js"></script>
+    <title>Mantenimiento Administrativo</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="./PaginaPrincipal.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./M.Usuarios.html">M. Usuarios</a>
+          </li>
+          <li>
+            <a href="./M.Clientes.html">M. Clientes</a>
+          </li>
+          <li>
+            <a href="./M.Prod.html">M. Productos</a>
+          </li>
+          <li>
+            <a href="./M.Citas.html">M. Citas</a>
+          </li>
+          <li>
+            <a href="./inicio.html">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </nav>
+ 
+
+      <section class="cardP2">
+        <div class="container">
+          <form class="Form_Tarjetas" id="frmRegPersona">
+
+            <h4>Formulario Ingresar Productos</h4>
+
+            <label for="" class="letra"> ID Producto: </label><br>
+            <input class="controls" type="text" name="Cedula" id="txtCed"><br>
+
+            <label for="" class="letra"> Nombre: </label><br>
+            <input class="controls" type="text" name="Nombre" id="txtNom"><br>
+
+            <label for="" class="letra"> Marca</label><br>
+            <input class="controls" type="text" name="Marca" id="txtMarca"><br>
+
+            <label for="" class="letra"> Cantidad: </label><br>
+            <input class="controls letra" type="text" name="txtCantidad" id="txtCantidad"><br>
+
+            <label for="" class="letra"> Tipo: </label><br>
+            <input class="controls letra" type="text" name="Tipo" id="txtTipo"><br>
+
+
+            <input class="btnM" type="button" value="Agregar" id="btnAgregar" onclick="AgregarProducto()"><br><br>
+
+        </form>
+        </div>
+      </section>
+      
+    
+
+  </body>
+
+</html>

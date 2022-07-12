@@ -1,0 +1,373 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background: black;
+    color: #ffffffff;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23ddd954' fill-opacity='0.33'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Oswald', sans-serif;
+  }
+  /*EMPIEZA MENU*/
+  
+  a{
+    color: rgb(165, 14, 14);
+    text-decoration: none;
+    text-shadow: 0 3px 25px rgba(243, 62, 7, 0.705);
+
+  }
+  
+  #navA{
+    color: white;
+  }
+
+  ul{
+    list-style: none;
+  }
+  
+  .containerP{
+    width: 90%;
+    margin: auto;
+  }
+  
+  .nav-main{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+  }
+  
+  .nav-brand{
+    width: 100px;
+  }
+  
+  .nav-main ul {
+    display: flex;
+  }
+  
+  .nav-main ul li{
+    padding: 10px;
+  }
+  
+  .nav-main ul li a{
+    font-size: 23px;
+    padding: 10px;
+  }
+  
+  .nav-main ul li a:hover{
+    border-bottom: 2px solid rgb(212, 214, 91);
+  }
+  
+  .nav-main ul.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .nav-menu-right a{
+    font-size: 5px;
+  }
+  /*TERMINA MENU*/
+  
+  
+  /*EMPIEZA SHOWCASE PRINCIPAL*/
+  hr{
+    margin: 10px 0;
+  }
+  
+  .showcase{
+    margin-top: 20px;
+    width: 100%;
+    background: linear-gradient(rgba(68, 13, 13, 0.35), rgba(38,2,2,0.446)), url(../img/shop.jpg) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 20px;
+  }
+  
+  .showcase h2{
+    margin-bottom: 10px 0;
+    font-size: 55px;
+  }
+  
+  /*TERMINA SHOWCASE PRINCIPAL*/
+  
+  /*EMPIEZA BIENVENIDA*/
+  .Bienvenida{
+    width: 100%;
+    height: 550px;
+    background: linear-gradient(rgba(68, 13, 13, 0.35), rgba(38,2,2,0.446)), url(../img/ink3.jpg) no-repeat center/cover;
+    text-align: center;
+  }
+  
+  .Bienvenida h2{
+    padding: 25px 15px;
+    color: #000000;
+    font-size: 45px;
+  }
+  
+  .Bienvenida h3{
+    padding: 5px 15px;
+    color: rgb(180, 27, 27);
+    font-size: 27px;
+  }
+  
+  .Bienvenida p{
+    padding: 5px 15px;
+    font-size: 23px;
+  }
+  
+  #hr2{
+    margin: 10px 170px;
+  }
+  
+  /*TERMINA BIENVENIDA*/
+  
+  
+//carrusel imagenes//
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+    }
+  }
+  
+  // Styling
+  .titleP{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 10px;
+  }
+  
+ .firstSection{
+    background: linear-gradient(rgba(0, 0, 0, 0.247), rgba(58, 55, 55, 0.582)), no-repeat center/cover;
+    background-attachment: fixed;
+    padding: 20px 0;
+    width: 100%;
+    
+  }
+  
+  .container {
+      max-width: 1044px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .carousel {
+      display: block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 22px;
+      
+      > input {
+          clip: rect(1px, 1px, 1px, 1px);
+          clip-path: inset(50%);
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          
+          &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+          &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+          &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+          &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+          &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+          &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+          
+          &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+          &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+      }
+  }
+  
+  .carousel__slides {
+      position: relative;
+      z-index: 1;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+  }
+  
+  .carousel__slide {
+      position: relative;
+      display: block;
+      flex: 1 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: all 300ms ease-out;
+      vertical-align: top;
+      box-sizing: border-box;
+      white-space: normal;
+      
+      figure {
+          display: flex;
+          margin: 0;
+      }
+      
+      div {
+          @include aspect-ratio(3, 2);
+          width: 100%;
+      }
+      
+      img {
+          display: block;
+          flex: 1 1 auto;
+          object-fit: cover;
+      }
+      
+      figcaption {
+          align-self: flex-end;
+          padding: 20px 20px 0 20px;
+          flex: 0 0 auto;
+          width: 25%;
+          min-width: 150px;
+      }
+      
+      .credit {
+          margin-top: 1rem;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;        
+      }
+      
+      &.scrollable {
+          overflow-y: scroll;
+      }
+  }
+  
+  .carousel__thumbnails {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      
+      margin: 0 -10px;
+      
+      .carousel__slides + & {
+          margin-top: 20px;
+      }
+      
+      li {        
+          flex: 1 1 auto;
+          max-width: calc((100% / 6) - 20px);  
+          margin: 0 10px;
+          transition: all 300ms ease-in-out;
+      }
+      
+      label {
+          display: block;
+          @include aspect-ratio(1,1);
+          
+                    
+          &:hover,
+          &:focus {
+              cursor: pointer;
+              
+              img {
+                  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                  transition: all 300ms ease-in-out;
+              }
+          }
+      }
+      
+      img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  }
+
+  // termina 1 section//
+
+
+  // empieza segunda seccion//
+
+  .CardContacto{
+    width: 100%;
+    height: 40vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 500px 200px;
+  }
+
+  .box{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.596);
+    width: 800px;
+    h1{
+      margin-left: 70px;
+    }
+    p{
+    padding: 3px;
+    margin-left: 70px;
+    font-size: 20px;
+  }
+ 
+  } 
+ 
+  .Mapa{
+    margin-left: 200px;
+  }
+
+  .box2{
+    margin-left: 300px;
+    padding: 55px;
+    margin-top: 70px;
+  }
+
+  .boxSec{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 25px;
+
+  }
+
+  .iconosC{
+    box-shadow: 0 3px 25px rgba(213, 216, 52, 0.5);
+    background: rgba(213, 216, 52, 0.185);
+  }
+
+
+  .footer-main-div{
+    padding: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.87);
+    width: 100%;
+    height: 100px;
+  }
+
+#Desig{
+text-align: right;
+}

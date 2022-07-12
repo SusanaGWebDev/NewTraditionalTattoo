@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/RegU.css">
+    <script src="./js/clientes.js"></script>
+    <title>Mantenimiento Administrativo</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="./PaginaPrincipal.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./M.Usuarios.html">M. Usuarios</a>
+          </li>
+          <li>
+            <a href="./M.Clientes.html">M. Clientes</a>
+          </li>
+          <li>
+            <a href="./M.Prod.html">M. Productos</a>
+          </li>
+          <li>
+            <a href="./M.Citas.html">M. Citas</a>
+          </li>
+          <li>
+            <a href="./inicio.html">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </nav>
+ 
+
+      <section class="cardP2">
+        <div class="container">
+            <form class="Form_Tarjetas" id="frmRegPersona">
+
+                <h4>Formulario Registar Cliente</h4>
+
+                <label for="" class="letra"> Cedula: </label><br>
+                <input class="controls" type="text" name="Cedula" id="txtCed" placeholder="Ejemplo: 101110111"><br>
+
+                <label for="" class="letra"> Nombre: </label><br>
+                <input class="controls" type="text" name="Nombre" id="txtNom" placeholder="Ejemplo: Juan"><br>
+
+                <label for="" class="letra"> Apellidos: </label><br>
+                <input class="controls" type="text" name="Apellidos" id="txtApe" placeholder="Ejemplo: Perez Rodrigez"><br>
+
+                <label for="" class="letra"> Fecha Nacimiento: </label><br>
+                <input class="controls letra" type="date" name="txtFechNac" id="txtFechNac"><br>
+
+                <label for="" class="letra"> Telefono </label><br>
+                <input class="controls letra" type="text" name="Telefono" id="txtTelefono" placeholder="Ejemplo 8888-8888"><br>
+
+                <label for="" class="letra"> Rol </label><br>
+                <select name="Rol" id="txtRol" class="controlEncarg">
+                    <option>Cliente</option>
+                    <option>Vendedor</option>
+
+                </select><br>
+
+                <input class="btnM" type="button" value="Agregar" id="btnAgregar" onclick="AgregarPersona()"><br><br>
+
+            </form>
+        </div>
+      </section>
+      
+    
+
+  </body>
+
+</html>

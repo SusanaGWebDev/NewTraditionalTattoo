@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/ListaProd.css">
+    <script src="./js/productos.js"></script>
+    <title>Mantenimiento Citas</title>
+</head>
+<body onload="CargarTablaProductos()">
+    <nav>
+        <ul>
+          <li>
+            <a href="./PaginaPrincipal.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./M.Usuarios.html">M. Usuarios</a>
+          </li>
+          <li>
+            <a href="./M.Clientes.html">M. Clientes</a>
+          </li>
+          <li>
+            <a href="./M.Prod.html">M. Productos</a>
+          </li>
+          <li>
+            <a href="./M.Citas.html">M. Citas</a>
+          </li>
+          <li>
+            <a href="./inicio.html">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </nav>
+ 
+
+      <div class="CardP">
+        <h1>Lista de Productos</h1>
+        <div class="container">
+            <table id="tblPersonas" class="table table-secondary">
+              <thead>
+                  <tr>
+                      <th>ID Producto</th>
+                      <th>Nombre</th>
+                      <th>Marca</th>
+                      <th>Cantidad</th>
+                      <th>Tipo</th>
+                      <th>Opciones</th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+          </table>
+          </div>
+          <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="Form_Tarjetas" id="frmRegPersona">
+
+                <h4>Formulario modificar Datos de Productos</h4>
+                <label for="" class="letra"> ID Producto: </label>
+                <input class="controls" type="text" name="Cedula" id="txtCedMod" >
+
+                <label for="" class="letra"> Nombre: </label>
+                <input class="controls" type="text" name="Nombre" id="txtNomMod" >
+
+                <label for="" class="letra"> Marca: </label>
+                <input class="controls" type="text" name="Apellidos" id="txtMarcaMod" >
+
+                <label for="" class="letra"> Cantidad: </label>
+                <input class="controls letra" type="text" name="Cantidad" id="txtCantidadMod">
+
+                <label for="" class="letra"> Tipo: </label>
+                <input class="controls letra" type="text" name="Tipo" id="txtTipoMod">
+
+                <input type="button" id="btnGuardar" onclick="EditarProducto(document.querySelector('#txtCedMod').value)"><br><br>
+            </form>
+        </div>
+      </div>
+      </div>
+
+</body>
+</html>
+
+
+

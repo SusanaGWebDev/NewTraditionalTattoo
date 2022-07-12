@@ -1,0 +1,237 @@
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdfcff;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235ad96f' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+nav {
+  max-width: 960px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, #ffffff), color-stop(75%, #ffffff), to(rgba(255, 255, 255, 0.37)));
+  -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0.37) 100%);
+          mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, #ffffff), color-stop(75%, #ffffff), to(rgba(255, 255, 255, 0.37)));
+          mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0.37) 100%);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.37)), color-stop(75%, rgba(255, 255, 255, 0.418)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.37) 25%, rgba(255, 255, 255, 0.418) 75%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgba(0, 35, 122, 0.719);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+.CardP {
+  width: 85%;
+  margin: 10px 125px;
+  height: 90vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.247)), to(rgba(99, 202, 233, 0.336))), no-repeat center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.247), rgba(99, 202, 233, 0.336)), no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 0 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  height: 60vh;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.container h4 {
+  font-size: 45px;
+  margin-left: 60px;
+  color: whitesmoke;
+}
+
+h1 {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgba(0, 35, 122, 0.719);
+  font-size: 35px;
+  text-decoration: none;
+  padding: 50px;
+  text-align: center;
+}
+
+.controls {
+  margin-left: 60px;
+  width: 75%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#82908d), color-stop(#7d9192), color-stop(#799298), color-stop(#79919e), to(#7c90a4));
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #000000;
+  *font-size: 18px;
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+}
+
+.controlSelect {
+  width: 65px;
+  height: 35px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#82908d), color-stop(#7d9192), color-stop(#799298), color-stop(#79919e), to(#7c90a4));
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+}
+
+.controls_form {
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#82908d), color-stop(#7d9192), color-stop(#799298), color-stop(#79919e), to(#7c90a4));
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #000000;
+}
+
+.controls::-webkit-input-placeholder {
+  color: #aadeee;
+}
+
+.controls:-ms-input-placeholder {
+  color: #aadeee;
+}
+
+.controls::-ms-input-placeholder {
+  color: #aadeee;
+}
+
+.controls::placeholder {
+  color: #aadeee;
+}
+
+.letra {
+  margin-left: 60px;
+  font-family: arial;
+  font-size: 18px;
+  color: #0a4870;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.btnM {
+  margin-left: 60px;
+  width: 155px;
+  height: 35px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.controlEncarg {
+  margin-left: 60px;
+  width: 77%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#82908d), color-stop(#7d9192), color-stop(#799298), color-stop(#79919e), to(#7c90a4));
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #ffffff;
+  *font-size: 18px;
+  background-image: linear-gradient(to right top, #82908d, #7d9192, #799298, #79919e, #7c90a4);
+  color: white;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 70px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 90%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  line-height: 20px;
+  background-color: #bce7e9d7;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.modal-content h4 {
+  color: #0a4870;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 10px;
+  font-size: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#btnGuardar {
+  background: url(../img/check.png);
+  width: 65px;
+  height: 65px;
+  border: none;
+  margin: 0 42%;
+}
+/*# sourceMappingURL=ListaCItas.css.map */

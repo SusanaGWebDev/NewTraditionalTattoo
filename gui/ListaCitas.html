@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/ListaCitas.css">
+    <script src="./js/agendarCitas.js"></script>
+    <title>Mantenimiento Citas</title>
+</head>
+<body onload="CargarTablaCitas()">
+    <nav>
+        <ul>
+          <li>
+            <a href="./PaginaPrincipal.html">Inicio</a>
+          </li>
+          <li>
+            <a href="./M.Usuarios.html">M. Usuarios</a>
+          </li>
+          <li>
+            <a href="./M.Clientes.html">M. Clientes</a>
+          </li>
+          <li>
+            <a href="./M.Prod.html">M. Productos</a>
+          </li>
+          <li>
+            <a href="./M.Citas.html">M. Citas</a>
+          </li>
+          <li>
+            <a href="./inicio.html">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </nav>
+ 
+
+      <div class="CardP">
+        <h1>Agenda de Citas</h1>
+            <div class="container">
+              <table id="tblPersonas" class="table table-secondary">
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Fecha de Cita</th>
+                        <th>Hora de Cita</th>
+                        <th>Telefono</th>
+                        <th>Encargado Cita</th>
+                        <th>Opciones</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            </div>
+            <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form class="Form_Tarjetas" id="frmRegPersona">
+
+                  <h4>Formulario modificar Citas</h4>
+                  <label for="" class="letra"> Cedula: </label>
+                  <input class="controls" type="text" name="Cedula" id="txtCedMod" >
+
+                  <label for="" class="letra"> Nombre: </label>
+                  <input class="controls" type="text" name="Nombre" id="txtNomMod" >
+
+                  <label for="" class="letra"> Apellidos: </label>
+                  <input class="controls" type="text" name="Apellidos" id="txtApeMod" >
+
+                  <label for="" class="letra"> Fecha de Cita: </label>
+                  <input class="controls letra" type="date" name="FechaCita" id="txtFechaCitaMod">
+
+                  <label for="" class="letra"> Hora de Cita: </label>
+                  <input class="controls letra" type="text" name="HoraCita" id="txtHoraCitaMod">
+
+                  <label for="" class="letra"> Telefono: </label>
+                  <input class="controls letra" type="text" name="Telefono" id="txtTelefonoMod">
+
+                  <label for="" class="letra"> Encargado: </label>
+                  <select name="Encargado" id="txtEncargadoMod" class="controls">
+                    <option>Tatuador 1</option>
+                    <option>Tatuador 2</option>
+                  </select>
+
+                  <input type="button"  id="btnGuardar" onclick="EditarCita(document.querySelector('#txtCedMod').value)"><br><br>
+              </form>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
+
+
+
